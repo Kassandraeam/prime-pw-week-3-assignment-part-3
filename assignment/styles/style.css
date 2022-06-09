@@ -1,1 +1,4 @@
 /* give your assignment a fun background color */
+body{
+    background: linear-gradient(360deg, #C1E0F7 60%, #A4DEF9 60%);
+}

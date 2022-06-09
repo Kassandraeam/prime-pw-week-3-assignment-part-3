@@ -74,3 +74,10 @@ console.log(`The total number of supplies is: ${totalParts}`);
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
 
+let partsInTotal = 572;
+//each box holds 7 parts.
+//should only be able to fill 81 boxes
+//leftover parts = 5
+//need a while loop
+
+
