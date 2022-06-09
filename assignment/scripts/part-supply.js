@@ -76,7 +76,7 @@ console.log('9. Filling boxes with a "while" loop');
 
 let partsInTotal = 572;
 
-let allParts = 572;
+let allParts = partsInTotal;
 let capacity = 7;
 let boxesFilled =  0;
 
