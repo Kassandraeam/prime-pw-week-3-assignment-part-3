@@ -75,9 +75,15 @@ console.log(`The total number of supplies is: ${totalParts}`);
 console.log('9. Filling boxes with a "while" loop');
 
 let partsInTotal = 572;
-//each box holds 7 parts.
-//should only be able to fill 81 boxes
-//leftover parts = 5
-//need a while loop
 
+let allParts = 572;
+let capacity = 7;
+let boxesFilled =  0;
 
+while (allParts > 6){
+    allParts = allParts - capacity;
+    boxesFilled += 1;
+}
+let leftover = partsInTotal - (boxesFilled*7);
+
+console.log(`Boxes filled: ${boxesFilled}. Parts leftover: ${leftover}.`);
