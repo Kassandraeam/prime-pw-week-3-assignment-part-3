@@ -60,7 +60,7 @@ for (i = 0; i < supplyChanges.length; i++){
     } else if (supplyChanges[i] === 0){
         console.log(`No Change.`)
     } else if (supplyChanges[i] < 0) {
-        console.log(`Removed ${supplyChanges[i]} parts.`)
+        console.log(`Removed ${Math.abs(supplyChanges[i])} parts.`)
     } else {
         console.log('Invalid entry in array');
     }
@@ -77,7 +77,7 @@ for (let update of supplyChanges) {
     } else if (update === 0) {
         console.log(`No Change.`);
     } else if (update < 0) {
-        console.log(`Removed ${update} parts.`)
+        console.log(`Removed ${Math.abs(update)} parts.`)
     } else {
         console.log('Invalid entry in array.')
     };
