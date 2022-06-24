@@ -28,7 +28,7 @@ console.log('5. Adding 25 to supplyChanges.');
 addToEnd = (item) => {
     supplyChanges.push(item);
     console.log(`Item: ${item} was added`);
-    console.log(`The array after adding ${item}: `, supplyChanges);
+    return console.log(`The array after adding ${item}: `, supplyChanges);
 }
 addToEnd(25);
 //console.log(supplyChanges);
@@ -39,6 +39,7 @@ addToEnd(25);
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.' 
 console.log('6. Showing supplyChanges...');
+
 /*
 for (init; stopCondit; iterator){
     init begins at 0
@@ -70,10 +71,27 @@ for (i = 0; i < supplyChanges.length; i++){
 console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop. 
 console.log('7. Showing supplyChanges with "for of" loop');
+for (let update of supplyChanges) {
+    if (update > 0) {
+        console.log(`Added ${update} parts.`);
+    } else if (update === 0) {
+        console.log(`No Change.`);
+    } else if (update < 0) {
+        console.log(`Removed ${update} parts.`)
+    } else {
+        console.log('Invalid entry in array.')
+    };
+};
 
 // 8. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
+let total = 0;
 console.log('8. Total supplies available is:');
+for (a = 0; a < supplyChanges.length; a++) {
+    // console.log(supplyChanges[a]);
+    total += supplyChanges[a];
+}
+console.log(total);
 
 // 9. We have a large stash of parts in our warehouse that we 
 //    need to box up and get ready for shipment. 
@@ -82,3 +100,4 @@ console.log('8. Total supplies available is:');
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
+
