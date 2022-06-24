@@ -39,7 +39,31 @@ addToEnd(25);
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.' 
 console.log('6. Showing supplyChanges...');
+/*
+for (init; stopCondit; iterator){
+    init begins at 0
+    stop -- i must be less than array.length
+    i++ to go through each one
+    run through each value of the array
 
+    if i > 0 log 'added x parts.'
+    else if i === 0, 'no change.'
+    else if i < 0 'removed x parts'
+    else 'invalid entry';
+}
+*/
+
+for (i = 0; i < supplyChanges.length; i++){
+    if (supplyChanges[i] > 0){
+        console.log(`Added ${supplyChanges[i]} parts.`)
+    } else if (supplyChanges[i] === 0){
+        console.log(`No Change.`)
+    } else if (supplyChanges[i] < 0) {
+        console.log(`Removed ${supplyChanges[i]} parts.`)
+    } else {
+        console.log('Invalid entry in array');
+    }
+};
 
 
 // STRETCH GOALS
