@@ -88,7 +88,6 @@ for (let update of supplyChanges) {
 let total = 0;
 console.log('8. Total supplies available is:');
 for (a = 0; a < supplyChanges.length; a++) {
-    // console.log(supplyChanges[a]);
     total += supplyChanges[a];
 }
 console.log(total);
@@ -100,4 +99,43 @@ console.log(total);
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
+/*
+572 parts 
+each box holds 7 parts
+while (condition) {
+    code block
+    iteration
+}
+log how many boxes were filled, how many left over.
+*/
 
+let totalParts = 572;
+let totalBoxes = 0;
+let remainingParts;
+
+while (totalParts > 7){
+    totalBoxes += 1;
+    totalParts -= 7;
+if (totalParts > 7) {
+    remainingParts = totalParts - 7;
+}
+}
+
+console.log(`Total boxes filled: ${totalBoxes}`);
+console.log(`Parts remaining: ${remainingParts}`);
+
+/*
+boxesFilled = (totalParts, partsPerBox) => {
+    let totalBoxes = 0;
+    let remainingParts;
+    while (totalParts >= partsPerBox){
+        totalBoxes += 1;
+        totalParts -= partsPerBox;
+            if (totalParts >= partsPerBox) {
+            remainingParts = totalParts - partsPerBox;
+    }
+    }
+    console.log(`Total boxes filled: ${totalBoxes}. \nParts left over: ${remainingParts}`)
+};
+boxesFilled(851, 7);
+*/
